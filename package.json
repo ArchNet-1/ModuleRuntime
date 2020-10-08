@@ -15,5 +15,8 @@
   "author": {
     "name": "Arch Net",
     "email": "archnetmodule@gmail.com"
+  },
+    "dependencies": {
+    "com.unity.textmeshpro": "3.0.1"
   }
 }
