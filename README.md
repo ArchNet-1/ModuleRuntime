@@ -6,7 +6,7 @@
     <img src="https://github.com/ArchNetModule/Stockage/blob/master/Images/ArchNetLogo.png" alt="Logo" width="300">
   </a>
 
-  <h3 align="center">Module Credit</h3>
+  <h3 align="center">Module Runtime</h3>
 </p>
 
 
@@ -45,7 +45,7 @@ That all folks !
 <!-- Usage -->
 ## usage
 
-This module is a simple credit scene for a video game.
+This module is a simple project data displayer in runtime.
 
 Get the github HTTPS project url and load it in Unity Package Manager windows
 
@@ -58,28 +58,25 @@ in Unity : Windows -> Package Manager -> + -> Add package from git url
 
 2. Clone the repo
 
-3. Create a new scene and call it "Credit" fro example
+3. Drag and drop Prefab "ModuleRuntime"  from the package
 
-4. Drag and drop Prefab "ModuleCredit"  from the package
+4. Join Module PlayerPref (optional)
 
-5. Set Script Component "Credit" values
+5. Launch scene
 
-[CUSTOM SETUP]
+6. Press F1 by default to see project data
 
-- Next Scene : write the next scene after the credit end
-- Text File : Drag your Txt File of your Credit ( There is an example in Resources Called "TextToDisplay" )
 
-[CUSTOM IMAGES]
+[SERVICES]
 
-- Background Img : Drag your main Background sprite
-- Game Logo Img : Drag your Game logo sprite
-- Corporation Img : Drag your entreprise / corporation sprite
-
-[ANIMATION]
-
-- Animation Duration : Duration time of the credit before load the next scene ( 60 sec by default)
-- Animation Clip : Animation Clip (use "credit" animation clip in Resources if you don't have any)
-- Animation Speed : Speed of the credit animation ( 2 by default)
+- AUDIO : this service give volume and mute of your audiosource ( by default it will use the attached component)
+- RESOLUTION : this service give resolution size and screen mode of the project
+- PRODUCT : this service give product and company name of the project
+- VERSION : this service give the actual version of the project
+- FPS : this service give the ms and the fps of the project
+- PLATEFORM : this service give the actual plateform developpement of the project
+- GRAPHICS : this serivce give the quality level and the anti aliasinf mode of the project
+- SHADOW : this service give the shadow resolution and the shadown level of the project
 
 <!-- CONTACT -->
 ## Contact
