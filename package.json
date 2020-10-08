@@ -1,0 +1,19 @@
+{
+  "name": "com.archnet.module.runtime",
+  "version": "1.0.4",
+  "displayName": "Arch Net Module Runtime",
+  "description": "This module add a simple show project data in runtime.",
+  "unity": "2020.1",
+  "unityRelease": "0b5",
+  "keywords": [
+    "Arch",
+    "ArchNet",
+    "Module",
+    "Runtime",
+    "Custom"
+  ],
+  "author": {
+    "name": "Arch Net",
+    "email": "archnetmodule@gmail.com"
+  }
+}
