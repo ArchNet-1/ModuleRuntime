@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 
@@ -6,11 +8,15 @@ namespace ArchNet.Module.Runtime
 {
     public class Runtime : MonoBehaviour
     {
+        // Service Manager
+        [SerializeField, Tooltip("Service Manager")]
+        private Transform _serviceManager = null;
+
         [Header("All Runtime Services")]
 
         // Array of Services
         [SerializeField, Tooltip("Services")]
-        private Service[] _services = null;
+        private List<Service> _services = new List<Service>();
 
         [SerializeField, Tooltip("PlayerPref Module Actif")]
         private bool _playerPrefModuleActif = false;
@@ -64,6 +70,31 @@ namespace ArchNet.Module.Runtime
         /// </summary>
         private void InitServices()
         {
+            // Service Manager misssing
+            if(null == _serviceManager)
+            {
+                // Set service manager
+                _serviceManager = gameObject.transform.GetChild(0);
+            }
+
+            // Runtime text misssing
+            if (null == _runtimeServiceText)
+            {
+                // Set service manager
+                _runtimeServiceText = gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
+            }
+
+            // services list is empty
+            if (0 == _services.Count)
+            {
+                foreach(Transform lChild in _serviceManager)
+                {
+                    // Add child service into list
+                    _services.Add(lChild.gameObject.GetComponent<Service>());
+                }
+            }
+
+            // Check every service
             foreach (Service lService in _services)
             {
                 // Init specific service
@@ -93,14 +124,14 @@ namespace ArchNet.Module.Runtime
             // Module Player Pref exist
             if(true == isPlayerPrefActif())
             {
-                if (Input.GetKeyDown(PlayerPrefSettings.Instance().key_runtime))
-                {
-                    // Reset text
-                    _runtimeServiceText.text = "";
+                //if (Input.GetKeyDown(PlayerPrefSettings.Instance().key_runtime))
+                //{
+                //    // Reset text
+                //    _runtimeServiceText.text = "";
 
-                    // Display Services
-                    SetDisplayService(!GetDisplayService());
-                }
+                //    // Display Services
+                //    SetDisplayService(!GetDisplayService());
+                //}
             }
             // Default
             else
