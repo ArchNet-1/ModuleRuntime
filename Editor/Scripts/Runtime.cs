@@ -85,13 +85,38 @@ namespace ArchNet.Module.Runtime
             }
 
             // services list is empty
-            if (0 == _services.Count)
+            if (gameObject.transform.childCount != _services.Count)
             {
                 foreach(Transform lChild in _serviceManager)
                 {
-                    // Add child service into list
-                    _services.Add(lChild.gameObject.GetComponent<Service>());
+                    bool lChildExist = false;
+
+                    for (int i = 0; i < _services.Count; ++i)
+                    {
+                        // Child already exist in the list
+                        if (_services[i].name == lChild.name)
+                        {
+                            lChildExist = true;
+                        }
+                    }
+                    
+                    // Child missing in the list
+                    if(false == lChildExist)
+                    {
+                        // child has a service component
+                        if(null != lChild.gameObject.GetComponent<Service>())
+                        {
+                            // Add child service into list
+                            _services.Add(lChild.gameObject.GetComponent<Service>());
+                        }
+                        else
+                        {
+                            // Missing service component
+                            Debug.Log(Constants.ERROR_412);
+                        }
+                    }
                 }
+            
             }
 
             // Check every service
