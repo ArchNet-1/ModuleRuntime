@@ -1,22 +1,23 @@
 {
   "name": "com.archnet.module.runtime",
-  "version": "1.0.3",
-  "displayName": "Arch Net Module Runtime",
-  "description": "This module add a simple show project data in runtime.",
-  "unity": "2020.1",
-  "unityRelease": "0b5",
+  "version": "2.0.0",
+  "displayName": "ArchNet - Runtime Module",
+  "description": "A debug panel for builds: press F1 to show live data (FPS, audio, graphics, screen, platform, version…).",
+  "unity": "6000.0",
+  "documentationUrl": "https://archnet-plateform.fr/#ModuleRuntime",
+  "changelogUrl": "https://github.com/ArchNet-1/ModuleRuntime/blob/master/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ArchNet-1/ModuleRuntime/blob/master/LICENSE.md",
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  },
   "keywords": [
-    "Arch",
-    "ArchNet",
-    "Module",
-    "Runtime",
-    "Custom"
+    "archnet",
+    "module",
+    "runtime"
   ],
   "author": {
-    "name": "Arch Net",
-    "email": "archnetmodule@gmail.com"
-  },
-    "dependencies": {
-    "com.unity.textmeshpro": "3.0.1"
+    "name": "ArchNet",
+    "email": "archnetmodule@gmail.com",
+    "url": "https://archnet-plateform.fr"
   }
 }
