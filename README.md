@@ -29,4 +29,4 @@ public class ScoreService : Service { public override string Read() => $"Score: 
 
 ## License
 
-See [LICENSE.md](LICENSE.md).
+MIT, see [LICENSE.md](LICENSE.md).

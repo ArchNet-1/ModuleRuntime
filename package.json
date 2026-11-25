@@ -4,6 +4,7 @@
   "displayName": "ArchNet - Runtime Module",
   "description": "A debug panel for builds: press F1 to show live data (FPS, audio, graphics, screen, platform, version…).",
   "unity": "6000.0",
+  "license": "MIT",
   "documentationUrl": "https://archnet-plateform.fr/#ModuleRuntime",
   "changelogUrl": "https://github.com/ArchNet-1/ModuleRuntime/blob/master/CHANGELOG.md",
   "licensesUrl": "https://github.com/ArchNet-1/ModuleRuntime/blob/master/LICENSE.md",
